@@ -1,0 +1,225 @@
+
+
+// === mixins ===
+@mixin border-radius-left($val){
+  border-top-left-radius: $val;
+  border-bottom-left-radius: $val;
+}
+
+@mixin border-radius-right($val){
+  border-top-right-radius: $val;
+  border-bottom-right-radius: $val;
+}
+
+@mixin toggleColor{
+    color: #fff;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #cfe9e9;
+}
+
+
+.container{
+  border-radius: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 800px;
+  margin-top: 60px;
+}
+
+article{
+  flex: 0 1 300px;
+  flex-basis: 600px;
+}
+// === left side styles ====
+
+.sideImage{
+  background-color: #e2fcfc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @include border-radius-left(10px);
+  text-align:center;
+
+  img{
+
+    order: 2;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h1{
+    font-size: 20px;
+    order: 1;
+    width: 70%;
+    padding: 5px;
+    margin: 120px auto 0 auto;
+    color: #516273;
+  }
+}
+
+// === right side styles ===
+
+.signUp {
+  background-color: #314459;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #fff;
+  @include border-radius-right(10px);
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin: 70px auto 0 auto;
+    width: 60%;
+    font-size: 12px;
+    font-weight: 100;
+    color: #516273;
+  }
+
+}
+
+// === toggle buttons ===
+
+.toggleButtonDiv{
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+button{
+  color: #3c4e60;
+  font-weight: bold;
+  background-color: #cfe9e9;
+  margin: 0;
+  padding: 5px 20px;
+  float: right;
+  box-shadow: -3px 5px 10px #000;
+}
+.toggle1{
+  @include border-radius-right(10px);
+}
+
+.toggle2{
+  @include border-radius-left(10px)
+}
+
+
+// === form styles ===
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 80px auto;
+  width: 60%;
+  font-size: 12px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  p input {
+    width: 100%;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #3c4e60;
+    color: #cfe9e9;
+    margin-bottom: 3px;
+    padding: 4px;
+  }
+
+  button{
+    @include border-radius-right(10px);
+    flex-basis: 30px;
+    width: 120px;
+    border-radius: 40px;
+    background-color: #cfe9e9;
+    box-shadow: -3px 5px 10px #000;
+    margin-top: 10px;
+    color: #516273;
+    font-weight: bold;
+  }
+}
+
+
+  h2 {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 5px;
+    font-weight: 100;
+    padding: 5px;
+  }
+
+  span {
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+
+
+
+// == modal background ===
+.error{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 250px;
+  right: 700px;
+  width: 250px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: -3px 10px 40px #000;
+}
+
+.error-title{
+  font-size: 50px;
+  margin-top:140px;
+  margin-bottom: 2px;
+  text-align: center;
+  padding: 0;
+  color: #314459;
+  font-weight: 300;
+}
+
+
+//=== modal content===
+
+.error-content{
+  padding-top: 5px;
+  text-align: center;
+  font-size: 15px;
+  color: #9e3f5a;
+  height: 60px;
+  width: 100%;
+  font-weight: bold;
+
+}
+// === modal button ===
+.errorBtn{
+  margin-top: -10px;
+  border: none;
+  width: 100%;
+  height: 20%;
+  background-color: #fff;
+  font-size: 20px;
+  font-variant: all-small-caps;
+  font-weight: 100;
+  border-top:1px solid rgba(70, 70, 70, 0.3);
+}
+
+// === modal icon styles ===
+i{
+  float: left;
+  position: absolute;
+  top: 30px;
+  right: 80px;
+}
+
+.invalid{
+  color: darkred;
+}
+
+.success{
+  color: darkgreen;
+}

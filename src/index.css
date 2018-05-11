@@ -1,0 +1,11 @@
+html{
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-weight: 100;
+  background: linear-gradient(#f88a98, #9e3f5a 70%);
+}
+
