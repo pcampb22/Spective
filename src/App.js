@@ -4,7 +4,7 @@ import './App.css';
 import './funct.js'
 
 
-
+//Error Function
 function Error(props){
     return(
         <div id="error-contain" className="error">
